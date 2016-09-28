@@ -348,16 +348,12 @@
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>${cobertura.version}</version>
 				<configuration>
-					<check />
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>clean</goal>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
+
 			</plugin>
 			<!--Specify the encoding for copying resources -->
 			<plugin>
@@ -378,7 +374,6 @@
 				<version>${cobertura.version}</version>
 				<configuration>
 					<formats>
-						<format>html</format>
 						<format>xml</format>
 					</formats>
 				</configuration>
